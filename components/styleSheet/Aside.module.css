@@ -1,29 +1,43 @@
 /* Aside.module.css */
 
 .container {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    left: 0;
-    top: 4.8rem;
-    bottom: 0;
-    color: black;
-    width: 200px; /* Adjust the width as needed */
-    background-color: white; /* Set your preferred background color */
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.4); /* Optional: Add a box shadow */
-  }
-  
-  .container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .container li {
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  /* Add more styling as needed */
-  
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 4.8rem;
+  bottom: 0;
+  color: black;
+  width: 240px; /* Adjust the width as needed */
+  background-color: white; /* Set your preferred background color */
+  padding-top: 2rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.4); /* Optional: Add a box shadow */
+}
+
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.container li:hover {
+  background-color: aliceblue;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.select {
+  background-color: aliceblue;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #00509b;
+  font-weight: bold;
+}
+
+/* Add more styling as needed */

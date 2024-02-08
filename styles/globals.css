@@ -31,7 +31,8 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
     background-color: #e9edf0;
-}
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
 ol, ul {
 	list-style: none;
 }

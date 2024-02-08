@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './styleSheet/Header.module.css'
-import none from '/image/none.png'
+import none from '/image/ws.jpeg'
 import search from '/image/search.png'
 import searchW from '/image/searchW.png'
 import Image from 'next/image'
