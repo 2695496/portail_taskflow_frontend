@@ -1,0 +1,53 @@
+.body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2D3E50;
+    background-image: url('../image/imagelogin1.jpg');
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Style for the login card */
+.login_card {
+    background: rgba(255, 255,255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #2D3E50;
+}
+
+/* Style for the form elements */
+.inputField {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for the login button */
+.submitButton[type="submit"] {
+    background-color: #0062cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .login-card {
+        width: 90%;
+    }
+}
