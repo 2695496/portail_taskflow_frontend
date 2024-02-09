@@ -7,7 +7,7 @@ import styles from "./styles/rh_accueil.module.css";
 const RH_Accueil = () => {
   const [addEvent, setAddEvent] = useState(false);
   const [titre, setTitre] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(new Date());
   const [evenements, setEvenements] = useState([
     {
       id: 1,
@@ -30,7 +30,7 @@ const RH_Accueil = () => {
     ]);
     setAddEvent(false);
     setTitre("");
-    setDate("");
+    setDate(new Date());
   };
 
   const removeEvent = (id) => {
@@ -74,7 +74,7 @@ const RH_Accueil = () => {
               </thead>
               <tbody>
                 {evenements.map((evenement) => (
-                  <tr key={evenement.id}>
+                  <tr key={evenement.id} className={evenement.id%2 == 0? styles.pair: styles.impair}>
                     <td>{evenement.titre}</td>
                     <td>{format(evenement.date, "dd/MM/yyyy")}</td>
                     <td>
