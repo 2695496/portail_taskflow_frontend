@@ -1,9 +1,12 @@
 // EmployeeListComponent.js
 
-import styles from './styles/EmployeeListComponent.module.css';
+import styles from "./styles/EmployeeListComponent.module.css";
 
-const EmployeeListComponent = ({ employees, onViewDetails }) => (
+const EmployeeListComponent = ({ employees, onViewDetails, handleHire }) => (
   <div className={styles.container}>
+    <div className={styles.btn}>
+      <button onClick={handleHire}>Ajouter un employé</button>
+    </div>
     <table className={styles.table}>
       <thead>
         <tr>
@@ -20,7 +23,9 @@ const EmployeeListComponent = ({ employees, onViewDetails }) => (
       <tbody>
         {employees.map((employee) => (
           <tr key={employee.id}>
-            <td>{employee.photo_profil} {employee.prenom} {employee.nom}</td>
+            <td>
+              {employee.photo_profil} {employee.prenom} {employee.nom}
+            </td>
             <td>{employee.telephone}</td>
             <td>{employee.sexe}</td>
             <td>{employee.email}</td>

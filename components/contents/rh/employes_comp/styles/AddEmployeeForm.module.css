@@ -1,9 +1,9 @@
 /* styles/AddEmployeeForm.module.css */
 
 .container {
+  background-color: #fff;
   margin: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
@@ -13,9 +13,7 @@
 }
 
 .container form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+overflow: hidden;
 }
 
 .container label {
@@ -27,7 +25,8 @@
 .container select {
   width: 100%;
   padding: 8px;
-  box-sizing: border-box;
+  background-color: rgb(238, 238, 238);
+  border: none;
   margin-bottom: 10px;
 }
 

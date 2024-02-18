@@ -1,6 +1,8 @@
 import fetchData from "@/components/service/service_fetch";
 import { useEffect, useState } from "react";
 import styles from "./styles/AddEmployeeForm.module.css";
+import im from "../../../../image/none.png";
+import Image from "next/image";
 
 const AddEmployeeForm = ({
   newEmployee,
@@ -8,11 +10,34 @@ const AddEmployeeForm = ({
   onAddEmployee,
   setList_Employes,
 }) => {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [image, setImage] = useState(im);
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedImage(file);
+    // Vous pouvez ajouter du code ici pour télécharger l'image vers votre serveur si nécessaire.
+  };
 
+  
+  if(selectedImage!==null){
+    setImage(URL.createObjectURL(selectedImage));
+  }
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Ajouter un Employé</h2>
+      <Image src={im} alt={image} />
       <form>
+        <label>
+          Photo de Profil:
+          <input type="file" accept="image/*" onChange={handleImageChange} />
+          {selectedImage && (
+            <img
+              src={URL.createObjectURL(selectedImage)}
+              alt="Selected Profile Photo"
+              style={{ maxWidth: "100px", maxHeight: "100px" }}
+            />
+          )}
+        </label>
         <label>
           Nom:
           <input

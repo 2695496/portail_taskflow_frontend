@@ -4,7 +4,6 @@ import EditEmployeeForm from "./employes_comp/EditEmployeeForm";
 import EmployeeDetailsComponent from "./employes_comp/EmployeeDetailsComponent";
 import EmployeeListComponent from "./employes_comp/EmployeeListComponent";
 
-
 const RH_Employes = () => {
   const [employes, setEmployes] = useState([
     {
@@ -89,7 +88,7 @@ const RH_Employes = () => {
   };
 
   const handleHire = () => {
-    setList_Employes(false)
+    setList_Employes(false);
     setShowDetails(false);
     setEditEmployee(null);
   };
@@ -97,7 +96,7 @@ const RH_Employes = () => {
   const handleBack = () => {
     setSelectedEmployee(null);
     setShowDetails(false);
-    
+
     setList_Employes(true);
   };
 
@@ -160,23 +159,30 @@ const RH_Employes = () => {
 
   return (
     <div>
-      <h2>Employés</h2>
-      <button onClick={handleHire}>Ajouter un employé</button>
+  
 
       {showDetails ? (
-        <EmployeeDetailsComponent
-          employee={selectedEmployee}
-          onEdit={() => {handleEdit(selectedEmployee); setList_Employes(false);}}
-          onDelete={() => handleDelete(selectedEmployee.id)}
-          onBack={handleBack}
-        />
-      ) : (list_Employes ? (
-          
-        <EmployeeListComponent
-          employees={employes}
-          onViewDetails={handleViewDetails}
-        />
-      ) : null)}
+        <>
+          <EmployeeDetailsComponent
+            employee={selectedEmployee}
+            onEdit={() => {
+              handleEdit(selectedEmployee);
+              setList_Employes(false);
+            }}
+            onDelete={() => handleDelete(selectedEmployee.id)}
+            onBack={handleBack}
+          />
+        </>
+      ) : list_Employes ? (
+        <>
+
+          <EmployeeListComponent
+            employees={employes}
+            onViewDetails={handleViewDetails}
+            handleHire={handleHire}
+          />
+        </>
+      ) : null}
 
       {showDetails || editEmployee || list_Employes ? null : (
         <AddEmployeeForm
