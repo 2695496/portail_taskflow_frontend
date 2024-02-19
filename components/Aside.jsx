@@ -9,6 +9,8 @@ import RH_Employes from './contents/rh/RH_Employes';
 import RH_Utilisateurs from './contents/rh/RH_Utilisateurs';
 import AsideDocteur from './aside/AsideDocteur';
 import AsideRessource from './aside/AsideRessource';
+import AsideTriage from './aside/AsideTriage';
+
 
 
 
@@ -24,6 +26,9 @@ const Aside = ({setContent, role}) => {
         break;
       case 2:
         setAside(<AsideDocteur setContent={setContent}/>)
+        break;
+      case 3:
+        setAside(<AsideTriage setContent={setContent}/>)
         break;
     }
   }, [])
