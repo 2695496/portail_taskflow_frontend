@@ -11,6 +11,8 @@ import AsideDocteur from './aside/AsideDocteur';
 import AsideRessource from './aside/AsideRessource';
 import AsideTriage from './aside/AsideTriage';
 import AsideLaborantins from './aside/AsideLaborantins';
+import AsideInfirmier from './aside/AsideInfirmier';
+
 
 
 
@@ -34,6 +36,9 @@ const Aside = ({setContent, role}) => {
         break;
       case 4 :
         setAside(<AsideLaborantins setContent={setContent}/>)
+        break;
+      case 5 :
+        setAside(<AsideInfirmier setContent={setContent}/>)
         break;
     }
   }, [])
