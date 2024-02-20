@@ -21,7 +21,7 @@ export default function Ressource() {
       </Head>
 
       <Header/>
-      <Aside setContent={setContent} role={3}/>
+      <Aside setContent={setContent} role={4}/>
       <Labo_Content content={content}/>
 
       
