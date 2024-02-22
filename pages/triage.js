@@ -1,11 +1,12 @@
 
 import Aside from "@/components/Aside";
 import Header from "@/components/Header";
+import AsideTriage from "@/components/aside/AsideTriage";
 import Triage_Acceuil from "@/components/contents/triage/Triage_Acceuil";
 import Triage_Content from "@/components/contents/triage/Triage_Content";
 import Head from "next/head";
 import { useState } from "react";
-Triage_Content
+
 
 export default function Ressource() {
   const [content, setContent] = useState(<Triage_Acceuil />);
@@ -19,7 +20,7 @@ export default function Ressource() {
       </Head>
 
       <Header/>
-      <Aside setContent={setContent} role={3}/>
+      <Aside setContent={setContent} asideContent={<AsideTriage />} />
       <Triage_Content content={content}/>
       
 

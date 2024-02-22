@@ -1,10 +1,13 @@
 
 import Aside from "@/components/Aside";
 import Header from "@/components/Header";
+import AsideDocteur from "@/components/aside/AsideDocteur";
 import DR_Acceuil from "@/components/contents/dr/DR_Acceuil";
 import DR_Content from "@/components/contents/dr/DR_Content";
 import Head from "next/head";
 import { useState } from "react";
+
+
 
 export default function Ressource() {
   const [content, setContent] = useState(<DR_Acceuil />);
@@ -18,7 +21,7 @@ export default function Ressource() {
       </Head>
 
       <Header/>
-      <Aside setContent={setContent} role={2}/>
+      <Aside setContent={setContent} asideContent={<AsideDocteur />} />
       <DR_Content content={content}/>
       
     </>

@@ -19,15 +19,15 @@ const AsideInfirmier = ({setContent}) => {
     return (
   
     
-    <div className={styles.container}>
+ 
     <ul>
       <li className={select === 0 ? styles.select: ""} onClick={handleAccueil}>Accueil</li>
   
       <li className={select === 1 ? styles.select: ""} onClick={handleEmployes}>Patients</li>
   
-      <li>Deconnexion</li>
+
     </ul>
-  </div>
+
   )};
 
   export default  AsideInfirmier;

@@ -20,8 +20,7 @@ const AsideTriage = ({setContent}) => {
     }
     return (
   
-    
-    <div className={styles.container}>
+ 
     <ul>
       <li className={select === 0 ? styles.select: ""} onClick={handleAccueil}>Accueil</li>
   
@@ -30,9 +29,9 @@ const AsideTriage = ({setContent}) => {
       <li className={select === 3 ? styles.select: ""} onClick={handleUtilisateurs}>Priorisation des soins</li>
 
   
-      <li>Deconnexion</li>
+  
     </ul>
-  </div>
+  
   )};
 
 export default AsideTriage

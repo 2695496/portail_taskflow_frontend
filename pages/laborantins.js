@@ -5,6 +5,7 @@ import Laboratoire_Accueil from "@/components/contents/Labo/Laboratoire_Accueil"
 import Labo_Content from "@/components/contents/Labo/Labo_Content";
 import Head from "next/head";
 import { useState } from "react";
+import AsideLaborantins from "@/components/aside/AsideLaborantins";
 
 
 
@@ -21,7 +22,7 @@ export default function Ressource() {
       </Head>
 
       <Header/>
-      <Aside setContent={setContent} role={4}/>
+      <Aside setContent={setContent} asideContent={<AsideLaborantins/>} />
       <Labo_Content content={content}/>
 
       

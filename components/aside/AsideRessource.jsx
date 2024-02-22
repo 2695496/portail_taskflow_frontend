@@ -21,16 +21,16 @@ const AsideRessource = ({setContent}) => {
     return (
   
     
-    <div className={styles.container}>
+    
     <ul>
       <li className={select === 0 ? styles.select: ""} onClick={handleAccueil}>Accueil</li>
   
       <li className={select === 1 ? styles.select: ""} onClick={handleEmployes}>Employes</li>
       <li className={select === 2 ? styles.select: ""} onClick={handleUtilisateurs}>Utilisateurs</li>
   
-      <li>Deconnexion</li>
+     
     </ul>
-  </div>
+
   )};
 
   export default  AsideRessource;

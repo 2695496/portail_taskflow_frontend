@@ -5,6 +5,7 @@ import RH_Content from "@/components/contents/rh/RH_Content";
 import Head from "next/head";
 import { useState } from "react";
 import RH_Accueil from "@/components/contents/rh/RH_Accueil";
+import AsideRessource from "@/components/aside/AsideRessource";
 
 
 export default function Ressource() {
@@ -19,7 +20,7 @@ export default function Ressource() {
       </Head>
 
       <Header/>
-      <Aside setContent={setContent} role={1}/>
+      <Aside setContent={setContent} asideContent={<AsideRessource />} />
       <RH_Content content={content}/>
 
       

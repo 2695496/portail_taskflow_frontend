@@ -22,7 +22,7 @@ const AsideDocteur = ({setContent}) => {
     return (
   
     
-    <div className={styles.container}>
+ 
     <ul>
       <li className={select === 0 ? styles.select: ""} onClick={handleAccueil}>Accueil</li>
   
@@ -30,9 +30,9 @@ const AsideDocteur = ({setContent}) => {
       <li className={select === 2 ? styles.select: ""} onClick={handleUtilisateurs}>Examen</li>
       <li className={select === 3 ? styles.select: ""} onClick={handleUtilisateurs}>Consultaion</li>
   
-      <li>Deconnexion</li>
+
     </ul>
-  </div>
+
   )};
 
 export default AsideDocteur

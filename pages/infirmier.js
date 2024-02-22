@@ -1,6 +1,7 @@
 
 import Aside from "@/components/Aside";
 import Header from "@/components/Header";
+import AsideInfirmier from "@/components/aside/AsideInfirmier";
 import INF_Accueil from "@/components/contents/inf/INF_Accueil";
 import INF_Content from "@/components/contents/inf/INF_Content";
 import Head from "next/head";
@@ -19,7 +20,7 @@ export default function Ressource() {
       </Head>
 
       <Header/>
-      <Aside setContent={setContent} role={5}/>
+      <Aside setContent={setContent} asideContent={<AsideInfirmier />} />
       <INF_Content content={content}/>
 
       
