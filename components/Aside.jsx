@@ -6,13 +6,14 @@ import { useRouter } from 'next/router';
 const Aside = ({asideContent}) => {
   const  router = useRouter();
   const handleLogOut = () =>{
+    localStorage.removeItem('token');
     router.push('/login')
   };
   return (
     <div className={styles.container}>
     {asideContent}
     <ul>
-      <li onClick={handleLogOut}>Se deconnecter</li>
+      <li onClick={handleLogOut}>Deconnexion</li>
     </ul>
     </div>
   );

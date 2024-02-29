@@ -25,10 +25,11 @@ const AsideDocteur = ({setContent}) => {
  
     <ul>
       <li className={select === 0 ? styles.select: ""} onClick={handleAccueil}>Accueil</li>
-  
-      <li className={select === 1 ? styles.select: ""} onClick={handleEmployes}>Patient</li>
-      <li className={select === 2 ? styles.select: ""} onClick={handleUtilisateurs}>Examen</li>
-      <li className={select === 3 ? styles.select: ""} onClick={handleUtilisateurs}>Consultaion</li>
+
+      <li className={select === 3 ? styles.select: ""} onClick={handleUtilisateurs}>Attributions</li>
+      <li className={select === 1 ? styles.select: ""} onClick={handleEmployes}>Patients</li>
+      <li className={select === 2 ? styles.select: ""} onClick={handleUtilisateurs}>Examens</li>
+      <li className={select === 3 ? styles.select: ""} onClick={handleUtilisateurs}>Consultaions</li>
   
 
     </ul>

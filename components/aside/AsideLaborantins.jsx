@@ -25,9 +25,9 @@ const AsideLaborantins = ({setContent}) => {
     <ul>
       <li className={select === 0 ? styles.select: ""} onClick={handleAccueil}>Accueil</li>
   
-      <li className={select === 1 ? styles.select: ""} onClick={handleEmployes}>Patient</li>
-      <li className={select === 2 ? styles.select: ""} onClick={handleEmployes}>Docteur</li>
-      <li className={select === 3 ? styles.select: ""} onClick={handleUtilisateurs}>Résultat</li>
+      <li className={select === 1 ? styles.select: ""} onClick={handleEmployes}>Attributions</li>
+      <li className={select === 2 ? styles.select: ""} onClick={handleEmployes}>Examens</li>
+      
       
 
 

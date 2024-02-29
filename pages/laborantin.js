@@ -1,17 +1,19 @@
 
+
 import Aside from "@/components/Aside";
 import Header from "@/components/Header";
-import AsideInfirmier from "@/components/aside/AsideInfirmier";
-import INF_Accueil from "@/components/contents/inf/INF_Accueil";
-import INF_Content from "@/components/contents/inf/INF_Content";
+import Laboratoire_Accueil from "@/components/contents/Labo/Laboratoire_Accueil";
+import AsideLaborantins from "@/components/aside/AsideLaborantins.jsx";
+import Labo_Content from "@/components/contents/Labo/Labo_Content";
 import Head from "next/head";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { routes } from "./services/routes.js";
 import { useEffect } from "react";
 
-export default function Infirmier() {
-  const [content, setContent] = useState(<INF_Accueil />);
+
+export default function Laboratoire() {
+  const [content, setContent] = useState(<Laboratoire_Accueil/>);
   const router = useRouter();
   const { pathname } = router;
 
@@ -46,11 +48,12 @@ export default function Infirmier() {
           </Head>
 
           <Header />
-          <Aside setContent={setContent} asideContent={<AsideInfirmier />} />
-          <INF_Content content={content}/>
+          <Aside setContent={setContent} asideContent={<AsideLaborantins/>} />
+          <Labo_Content content={content}/>
         </>
       ):(null)}
     </>
   );
 }
+
 

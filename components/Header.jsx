@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './styleSheet/Header.module.css'
 import none from '/image/ws.jpeg'
 import search from '/image/search.png'
@@ -7,6 +7,7 @@ import Image from 'next/image'
 
 function Header() { 
     const [search_barre, setSearch_Barre] = useState(false);
+    const [user, setUser] = useState({name: null});
     const openbarre = (e) => {
         e.preventDefault ();
         setSearch_Barre (true);
@@ -16,6 +17,10 @@ function Header() {
         e.preventDefault ();
         setSearch_Barre (false);
     }
+
+    useEffect(()=>{
+        setUser(JSON.parse(localStorage.getItem('token')));
+    }, []);
   return (
 
     <div className={styles.Header}>
@@ -37,7 +42,7 @@ function Header() {
                 </li>
                 <li>
                     <div className={styles.profil} >
-                        <span>Fatima, K</span>
+                        <span>{user.name}</span>
                         <Image className={styles.image_log} src={none} alt="icone"/>
                     </div>
                 </li>

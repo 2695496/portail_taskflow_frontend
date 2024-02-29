@@ -22,8 +22,12 @@ const AsideInfirmier = ({setContent}) => {
  
     <ul>
       <li className={select === 0 ? styles.select: ""} onClick={handleAccueil}>Accueil</li>
-  
-      <li className={select === 1 ? styles.select: ""} onClick={handleEmployes}>Patients</li>
+
+      <li className={select === 1 ? styles.select: ""} onClick={handleEmployes}>Attente</li>
+      <li className={select === 2 ? styles.select: ""} onClick={handleEmployes}>Patient</li>
+      <li className={select === 3 ? styles.select: ""} onClick={handleEmployes}>Dossiers</li>
+      <li className={select === 4 ? styles.select: ""} onClick={handleEmployes}>Attributions</li>
+
   
 
     </ul>
