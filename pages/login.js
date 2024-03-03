@@ -1,14 +1,12 @@
 import Link from "next/link";
-import styles from "../styles/Login.module.css";
+import styles from "../styles/login.module.css";
 import { useRouter } from "next/router";
 import { routes } from "./services/routes.js";
-import { useEffect } from "react";
-
-
-routes
+import { useEffect, useState } from "react";
 
 export default function Login() {
   const router = useRouter();
+  const [error, setError] = useState(false);
   const soumettre = (e) => {
     e.preventDefault();
     const data = {
@@ -20,7 +18,6 @@ export default function Login() {
     const url = "/api/login";
 
     // Data to be sent in the request body
-
 
     // Configuring the fetch request
     const requestOptions = {
@@ -42,31 +39,33 @@ export default function Login() {
       })
       .then((data) => {
         // Handle the JSON response data
-        localStorage.setItem('token', JSON.stringify(data.token) );
-        console.log(localStorage.getItem('token'));
+        localStorage.setItem("token", JSON.stringify(data.token));
+        console.log(localStorage.getItem("token"));
+        setError(false);
         router.push(routes(data.token.id_role));
       })
       .catch((error) => {
         // Handle any errors that occurred during the fetch operation
         console.error("There was a problem with the fetch operation:", error);
+        setError(true);
       });
   };
 
-  useEffect(()=> {
-    const token = localStorage.getItem('token');
-    if(token){
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
       console.log(token);
       const user = JSON.parse(token);
       router.push(routes(user.id_role));
     }
-  }, [])
+  }, []);
   return (
     <main className={styles.body}>
       <div className={styles.login_card}>
-        <h1>Login</h1>
+        <h1>Connexion</h1>
         <form onSubmit={soumettre}>
           <div>
-            <label htmlFor="numeroEmployer">Numero Employé</label>
+            <label htmlFor="numeroEmployer">Matricule</label>
             <input
               type="text"
               id="numeroEmployer"
@@ -89,6 +88,15 @@ export default function Login() {
             Se connecter
           </button>
         </form>
+
+        {error ? (
+          <div className={styles.message_error}>
+            <p>
+              Une erreur est survenue avec le matricule ou le mot de passe. Si
+              le problème persiste, veuillez contacter l'équipe de support.
+            </p>
+          </div>
+        ) : null}
       </div>
     </main>
   );

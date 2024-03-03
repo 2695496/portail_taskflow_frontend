@@ -49,7 +49,7 @@ export default function Triage() {
           </Head>
 
           <Header />
-          <Aside setContent={setContent} asideContent={<AsideTriage setContent={setContent} setTitre={setTitre} />} />
+          <Aside  asideContent={<AsideTriage setContent={setContent} setTitre={setTitre} />} />
           <Triage_Content content={content}/>
         </>
       ):(null)}

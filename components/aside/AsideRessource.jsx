@@ -1,22 +1,28 @@
 import { useState } from 'react';
 import styles from '../styleSheet/Aside.module.css';
+import RH_Accueil from '../contents/rh/RH_Accueil';
+import RH_Employes from '../contents/rh/RH_Employes';
+import RH_Utilisateurs from '../contents/rh/RH_Utilisateurs';
 
 
-const AsideRessource = ({setContent}) => {
+const AsideRessource = ({setContent, setTitre}) => {
 
     const [select, setSelect] = useState(0);
   
     const handleAccueil = (e) => {
-      setContent(<RH_Accueil />)
+      setContent(<RH_Accueil />);
       setSelect(0);
+      setTitre("Accueil");
     }
     const handleEmployes = (e) => {
       setContent(<RH_Employes />);
       setSelect(1);
+      setTitre("Employes");
     }
     const handleUtilisateurs = (e) => {
       setContent(<RH_Utilisateurs />);
-      setSelect(2)
+      setSelect(2);
+      setTitre("Utilisateurs");
     }
     return (
   

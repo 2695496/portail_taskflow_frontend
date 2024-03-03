@@ -1,29 +1,29 @@
 import React, { useState } from "react";
 import { format } from "date-fns";
-import styles from "./styles/dr_accueil.module.css";
+import styles from "./styles/labo_acceuil.module.css";
 
-const DR_Acceuil = () => {
+const Labo_Acceuil = () => {
   const [evenements, setEvenements] = useState([
     {
       id: 1,
-      titre: "Conférence médicale sur les avancées en cardiologie",
+      titre: "Formation sur les nouvelles techniques d'analyse",
       date: new Date("2024-02-10"),
     },
-    { id: 2, titre: "Réunion clinique pour discuter des cas complexes", date: new Date("2024-02-12") },
+    { id: 2, titre: "Séance de brainstorming pour l'amélioration des protocoles", date: new Date("2024-02-12") },
   ]);
 
   const taches = [
-    { id: 1, description: "Effectuer des diagnostics précis" },
-    { id: 2, description: "Élaborer des plans de traitement personnalisés" },
-    { id: 3, description: "Effectuer des interventions chirurgicales programmées" },
+    { id: 1, description: "Analyser les échantillons reçus" },
+    { id: 2, description: "Préparer les solutions et réactifs pour les tests" },
+    { id: 3, description: "Vérifier et calibrer les équipements de laboratoire" },
   ];
 
   return (
     <div className={styles.container}>
       <div className={styles.banner}>
-      <h2>Bonjour, Fatima</h2>
+        <h2>Bienvenue, Fatima</h2>
         <p>
-          Nous vous souhaitons la bienvenue dans votre espace dédié. Votre expertise médicale est essentielle pour la santé et le bien-être de nos patients. Nous sommes là pour vous soutenir dans vos tâches quotidiennes et pour vous fournir les ressources nécessaires pour offrir les meilleurs soins possible.
+          Nous sommes ravis de vous voir. Votre expertise et votre contribution au laboratoire sont essentielles pour assurer des analyses précises et fiables. Nous sommes là pour vous soutenir dans vos tâches et encourager votre développement professionnel.
         </p>
       </div>
       <div className={styles.element_content}>
@@ -61,4 +61,4 @@ const DR_Acceuil = () => {
   );
 };
 
-export default DR_Acceuil;
+export default Labo_Acceuil;

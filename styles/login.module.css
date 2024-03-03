@@ -23,6 +23,13 @@
     color: #2D3E50;
 }
 
+.login_card h1{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.4em;
+}
+
 /* Style for the form elements */
 .inputField {
     width: 90%;
@@ -42,6 +49,12 @@
     cursor: pointer;
     width: 100%;
     margin-top: 10px;
+    font-weight: bold;
+}
+
+.message_error{
+    color: rgb(145, 1, 1);
+    padding: 1rem;
     font-weight: bold;
 }
 

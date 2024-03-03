@@ -1,23 +1,42 @@
+import DR_Acceuil from '../contents/dr/DR_Acceuil';
+import DR_Attributions from '../contents/dr/DR_Attributions';
+import DR_Consultations from '../contents/dr/DR_Consultations';
+import DR_Examens from '../contents/dr/DR_Examens';
+import DR_Patients from '../contents/dr/DR_Patients';
 import styles from '../styleSheet/Aside.module.css';
 
 
 import React, { useState } from 'react'
 
-const AsideDocteur = ({setContent}) => {
+const AsideDocteur = ({setContent, setTitre}) => {
 
     const [select, setSelect] = useState(0);
   
     const handleAccueil = (e) => {
-      setContent(<RH_Accueil />)
+      setContent(<DR_Acceuil />);
       setSelect(0);
+      setTitre("Accueil");
     }
-    const handleEmployes = (e) => {
-      setContent(<RH_Employes />);
+    
+    const handleAttributions = (e) => {
+      setContent(<DR_Attributions />);
       setSelect(1);
+      setTitre("Attributions");
     }
-    const handleUtilisateurs = (e) => {
-      setContent(<RH_Utilisateurs />);
-      setSelect(2)
+    const handlePatients = (e) => {
+      setContent(<DR_Patients />);
+      setSelect(2);
+      setTitre("Patients");
+    }
+    const handleExamens = (e) => {
+      setContent(<DR_Examens />);
+      setSelect(3);
+      setTitre("Examens");
+    }
+    const handleConsultations = (e) => {
+      setContent(<DR_Consultations />);
+      setSelect(4);
+      setTitre("Consultations");
     }
     return (
   
@@ -26,10 +45,10 @@ const AsideDocteur = ({setContent}) => {
     <ul>
       <li className={select === 0 ? styles.select: ""} onClick={handleAccueil}>Accueil</li>
 
-      <li className={select === 3 ? styles.select: ""} onClick={handleUtilisateurs}>Attributions</li>
-      <li className={select === 1 ? styles.select: ""} onClick={handleEmployes}>Patients</li>
-      <li className={select === 2 ? styles.select: ""} onClick={handleUtilisateurs}>Examens</li>
-      <li className={select === 3 ? styles.select: ""} onClick={handleUtilisateurs}>Consultaions</li>
+      <li className={select === 1 ? styles.select: ""} onClick={handleAttributions}>Attributions</li>
+      <li className={select === 2 ? styles.select: ""} onClick={handlePatients}>Patients</li>
+      <li className={select === 3 ? styles.select: ""} onClick={handleExamens}>Examens</li>
+      <li className={select === 4 ? styles.select: ""} onClick={handleConsultations}>Consultations</li>
   
 
     </ul>
