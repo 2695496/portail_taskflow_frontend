@@ -1,22 +1,24 @@
 import React from 'react';
+import styles from "./styles/tableauPatient.module.css";
 
 function TableauPatients({ data }) {
   return (
-    <table>
+    <table className={styles.table}>
       <thead>
         <tr>
-          <th>Prénom</th>
-          <th>Nom</th>
-          <th>Genre</th>
-          <th>Numéro de Téléphone</th>
-          <th>Email</th>
-          <th>État</th>
-          <th>Niveau</th>
+          <th className={styles.th}>Prénom</th>
+          <th className={styles.th}>Nom</th>
+          <th className={styles.th}>Genre</th>
+          <th className={styles.th}>Téléphone</th>
+          <th className={styles.th}>Email</th>
+          <th className={styles.th}>État</th>
+          <th className={styles.th}>Niveau</th>
         </tr>
       </thead>
       <tbody>
         {data.map(patient => (
-          <tr key={patient.id}>
+          <tr key={patient.id} className={styles.line}>
+             
             <td>{patient.prenom}</td>
             <td>{patient.nom}</td>
             <td>{patient.genre}</td>
@@ -24,6 +26,9 @@ function TableauPatients({ data }) {
             <td>{patient.email}</td>
             <td>{patient.etat}</td>
             <td>{patient.niveau}</td>
+            <td>
+              <input type="checkbox" className={styles.checkbox} />
+            </td>
           </tr>
         ))}
       </tbody>

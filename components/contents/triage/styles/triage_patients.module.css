@@ -1,0 +1,131 @@
+/* triage_patients.module.css */
+
+/* General button style */
+.button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Example blue color, adjust the color code to match your design */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+  }
+  
+  /* Active button style */
+  .button.active {
+    background-color: #0056b3; /* Darker shade to indicate active state */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: add a shadow to active button */
+  }
+  
+  /* Container for the buttons for additional styling if needed */
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the total patients count */
+  .total-patients {
+    margin-left: auto; /* To push it to the right side of the container */
+    font-size: 16px;
+    color: #333; /* Adjust the color to match your design */
+  }
+  
+  /* Additional global styles */
+  .body {
+    font-family: 'Arial', sans-serif; /* Use your preferred font */
+  }
+  
+
+  /* triage_patients.module.css */
+
+.body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; /* Couleur de fond légère, ajustez-la selon vos besoins */
+    color: #333; /* Couleur du texte, ajustez-la selon vos besoins */
+  }
+  
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; /* Couleur bleue, ajustez selon le design de votre bouton */
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #0056b3; /* Couleur au survol, un bleu plus foncé */
+  }
+  
+  .button.active {
+    background-color: #0056b3; /* Couleur du bouton actif */
+  }
+  
+  .total-patients {
+    margin-left: auto;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Ajoutez ici les styles pour votre tableau de patients en fonction de l'image */
+  .tableau-patients {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour le relief */
+    overflow: hidden; /* Assure que rien ne dépasse du tableau */
+  }
+  
+  /* En-têtes du tableau */
+  .tableau-patients thead {
+    background-color: #007bff; /* Couleur de fond de l'en-tête */
+    color: white;
+  }
+  
+  /* Lignes du tableau */
+  .tableau-patients tr {
+    border-bottom: 1px solid #ddd; /* Séparation des lignes */
+  }
+  
+  /* Cellules du tableau */
+  .tableau-patients td, .tableau-patients th {
+    text-align: left;
+    padding: 12px 15px; /* Espacement à l'intérieur des cellules */
+  }
+  
+  /* Survol des lignes du tableau */
+  .tableau-patients tr:hover {
+    background-color: #f1f1f1; /* Couleur de fond au survol */
+  }
+  
+  /* Styles spécifiques pour le premier enfant th (si nécessaire) */
+  .tableau-patients th:first-child {
+    border-top-left-radius: 6px; /* Arrondir le coin supérieur gauche */
+  }
+  
+  /* Styles spécifiques pour le dernier enfant th (si nécessaire) */
+  .tableau-patients th:last-child {
+    border-top-right-radius: 6px; /* Arrondir le coin supérieur droit */
+  }
+
+
+  
+  
