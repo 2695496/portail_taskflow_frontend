@@ -1,8 +1,13 @@
 import React from 'react'
+import TableauPatients from './inf_compo/TableauPatients'
+import { patients } from '@/pages/api/data/patients'
 
 const INF_Dossiers = () => {
   return (
-    <div>INF_Dossiers</div>
+    <div>
+      <TableauPatients data={patients} viewBtn={false} />
+    </div>
+
   )
 }
 

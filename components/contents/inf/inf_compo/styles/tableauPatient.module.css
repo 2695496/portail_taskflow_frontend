@@ -1,0 +1,59 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .th {
+    background-color: #0166c5;
+    color: #ffffff;
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .line {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .line:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .line:last-of-type {
+    border-bottom: 2px solid #0166c5;
+  }
+  
+  .line td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+/* Ajoutez ceci à vos styles existants */
+.checkbox {
+    margin-right: 10px; /* Adjust spacing to your preference */
+  }
+  .line {
+    /* Vos autres styles */
+  }
+  
+  .line td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .checkbox {
+    margin-right: 10px;
+    cursor: pointer; /* Rend la souris en main lors du survol sur la checkbox */
+  }
+  
+  /* Style pour l'effet de survol sur la ligne entière */
+  .line:hover {
+    background-color: #e8f4fc; /* Couleur de fond légère au survol */
+  }
+  
+  /* Style pour l'effet de survol spécifiquement sur la checkbox */
+  .checkbox:hover {
+    background-color: #d0e2f2; /* Couleur de fond légèrement différente pour la checkbox au survol */
+    /* Ajouter d'autres styles si nécessaire */
+  }    

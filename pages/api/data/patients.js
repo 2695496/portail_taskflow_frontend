@@ -18,6 +18,16 @@ let patients = [
       email: "marie.martin@example.com",
       etat: "Inactif",
       niveau: "Débutant"
+    },
+    {
+      id: 3,
+      prenom: "Pascal",
+      nom: "Kode",
+      genre: "Féminin",
+      numeroTelephone: "765544323",
+      email: "pascal.kode@example.com",
+      etat: "Inactif",
+      niveau: "Débutant"
     }
   ];
   

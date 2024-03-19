@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./styles/tableauPatient.module.css";
 
-function TableauPatients({ data }) {
+function TableauPatients({ data, viewBtn=false }) {
   return (
     <table className={styles.table}>
       <thead>
@@ -13,6 +13,7 @@ function TableauPatients({ data }) {
           <th className={styles.th}>Email</th>
           <th className={styles.th}>État</th>
           <th className={styles.th}>Niveau</th>
+          {viewBtn?(<th className={styles.th}>Action</th>):(null)}
         </tr>
       </thead>
       <tbody>
@@ -26,6 +27,7 @@ function TableauPatients({ data }) {
             <td>{patient.email}</td>
             <td>{patient.etat}</td>
             <td>{patient.niveau}</td>
+            {viewBtn?(<td><button>Prendre</button></td>):(null)}
           </tr>
         ))}
       </tbody>
