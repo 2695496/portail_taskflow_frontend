@@ -1,0 +1,50 @@
+/* styles/EditEmployeeForm.module.css */
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+
+  .container form {
+    background-color: #fff;
+    margin: 1rem 0;
+    padding:2rem;
+  }
+  
+  
+  
+  .container label {
+    display: grid;
+    grid-template-columns: 300px 700px ;
+  }
+  
+  .container input,
+  .container select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #eaeaea;
+  }
+  
+  .container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .container button:hover {
+    background-color: #0056b3;
+  }
+  
