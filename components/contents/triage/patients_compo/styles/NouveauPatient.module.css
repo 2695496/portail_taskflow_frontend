@@ -1,0 +1,40 @@
+
+.ajoute_tete{
+    padding: 1rem 0;
+    display: flex;
+    justify-content:space-between;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.ajoute_tete h2{
+    font-weight: bold;
+    font-size: 1.5em ;
+}
+.formulaire{
+    
+}
+
+.formulaire fieldset{
+    border: 1px solid #d1d1d1;
+    background-color: #f7fcff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.formulaire legend{
+    background-color: #00509b;
+    padding: 10px;
+    color: #fff;
+}
+
+.formulaire label{
+    display: grid;
+    grid-template-columns: 300px 100vh;
+    align-items: center;
+}
+
+.formulaire input, .formulaire select{
+    padding: 0.4rem 1rem;
+    background-color: #e1e1e1;
+    border: none;
+}
