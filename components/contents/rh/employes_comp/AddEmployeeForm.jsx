@@ -14,31 +14,48 @@ const AddEmployeeForm = ({
   const [image, setImage] = useState(im);
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    setSelectedImage(file);
+    console.log(URL.createObjectURL(file));
+    setImage(URL.createObjectURL(file));
     // Vous pouvez ajouter du code ici pour télécharger l'image vers votre serveur si nécessaire.
   };
 
-  
-  if(selectedImage!==null){
+  const retireBtn = () => {
+    setImage(im);
+  }
+
+  if (selectedImage !== null) {
     setImage(URL.createObjectURL(selectedImage));
   }
+
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Ajouter un Employé</h2>
-      <Image src={im} alt={image} />
       <form>
-        <label>
-          Photo de Profil:
-          <input type="file" accept="image/*" onChange={handleImageChange} />
-          {selectedImage && (
+        <div className={styles.photo_content}>
+          <Image src={image? image: im} alt={image} width={300} height={300} className={styles.imgS} />
+          <div>
+
+          
+          
+            <input type="file" accept="image/*" id="photo" style={{display:"none"}} onChange={handleImageChange} />
+            <label htmlFor="photo"><div className={styles.btnS}>Choisir un fichier</div>
+            {/*selectedImage && (
             <img
               src={URL.createObjectURL(selectedImage)}
               alt="Selected Profile Photo"
               style={{ maxWidth: "100px", maxHeight: "100px" }}
             />
-          )}
-        </label>
-        <label>
+          )*/}
+          </label><br />
+          <div onClick={retireBtn} className={styles.btnR}>Retirer la photo</div>
+          </div>
+        </div>
+
+
+        <fieldset>
+          <legend>Identite</legend>
+          <label>
           Nom:
           <input
             type="text"
@@ -46,7 +63,7 @@ const AddEmployeeForm = ({
             value={newEmployee.nom}
             onChange={onInputChange}
           />
-        </label>
+        </label><br />
         <label>
           Prénom:
           <input
@@ -55,7 +72,7 @@ const AddEmployeeForm = ({
             value={newEmployee.prenom}
             onChange={onInputChange}
           />
-        </label>
+        </label><br />
         <label>
           Date de Naissance:
           <input
@@ -64,70 +81,16 @@ const AddEmployeeForm = ({
             value={newEmployee.date_naissance}
             onChange={onInputChange}
           />
-        </label>
+        </label><br />
         <label>
           Sexe:
-          <input
-            type="text"
-            name="sexe"
-            value={newEmployee.sexe}
-            onChange={onInputChange}
-          />
-        </label>
-        <label>
-          Adresse Rue:
-          <input
-            type="text"
-            name="adresse_rue"
-            value={newEmployee.adresse_rue}
-            onChange={onInputChange}
-          />
-        </label>
-        <label>
-          Adresse Ville:
-          <input
-            type="text"
-            name="adresse_ville"
-            value={newEmployee.adresse_ville}
-            onChange={onInputChange}
-          />
-        </label>
-        <label>
-          Adresse Code Postal:
-          <input
-            type="text"
-            name="adresse_code_postal"
-            value={newEmployee.adresse_code_postal}
-            onChange={onInputChange}
-          />
-        </label>
-        <label>
-          Adresse Pays:
-          <input
-            type="text"
-            name="adresse_pays"
-            value={newEmployee.adresse_pays}
-            onChange={onInputChange}
-          />
-        </label>
-        <label>
-          Téléphone:
-          <input
-            type="text"
-            name="telephone"
-            value={newEmployee.telephone}
-            onChange={onInputChange}
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="text"
-            name="email"
-            value={newEmployee.email}
-            onChange={onInputChange}
-          />
-        </label>
+
+          <select onChange={onInputChange} name="sexe">
+            <option style={{color:"#919191"}} value={newEmployee.sexe}>Choisir le sexe</option>
+            <option value={newEmployee.sexe}>Masculin</option>
+            <option value={newEmployee.sexe}>Feminin</option>
+          </select>
+        </label><br />
         <label>
           Nationalité:
           <input
@@ -136,7 +99,8 @@ const AddEmployeeForm = ({
             value={newEmployee.nationalite}
             onChange={onInputChange}
           />
-        </label>
+          
+        </label><br />
         <label>
           État Civil:
           <input
@@ -146,7 +110,89 @@ const AddEmployeeForm = ({
             onChange={onInputChange}
           />
         </label>
+        </fieldset>
+        
+
+
+
+
+
+        <fieldset>
+          <legend>Adresse</legend>
+          
         <label>
+          Adresse Rue:
+          <input
+            type="text"
+            name="adresse_rue"
+            value={newEmployee.adresse_rue}
+            onChange={onInputChange}
+          />
+        </label><br />
+        <label>
+          Adresse Ville:
+          <input
+            type="text"
+            name="adresse_ville"
+            value={newEmployee.adresse_ville}
+            onChange={onInputChange}
+          />
+        </label><br />
+        <label>
+          Adresse Code Postal:
+          <input
+            type="text"
+            name="adresse_code_postal"
+            value={newEmployee.adresse_code_postal}
+            onChange={onInputChange}
+          />
+        </label><br />
+        <label>
+          Adresse Pays:
+          <input
+            type="text"
+            name="adresse_pays"
+            value={newEmployee.adresse_pays}
+            onChange={onInputChange}
+          />
+        </label>
+        </fieldset>
+
+
+
+
+
+
+          <fieldset>
+            <legend>Contact</legend>
+            
+        <label>
+          Téléphone:
+          <input
+            type="text"
+            name="telephone"
+            value={newEmployee.telephone}
+            onChange={onInputChange}
+          />
+        </label><br />
+        <label>
+          Email:
+          <input
+            type="text"
+            name="email"
+            value={newEmployee.email}
+            onChange={onInputChange}
+          />
+        </label><br />
+
+          </fieldset>
+
+
+
+<fieldset>
+  <legend>Autre</legend>
+  
+  <label>
           Fonction:
           <input
             type="text"
@@ -154,16 +200,8 @@ const AddEmployeeForm = ({
             value={newEmployee.fonction}
             onChange={onInputChange}
           />
-        </label>
-        <label>
-          Photo de Profil:
-          <input
-            type="text"
-            name="photo_profil"
-            value={newEmployee.photo_profil}
-            onChange={onInputChange}
-          />
-        </label>
+        </label><br />
+
         <label>
           Type d'employé:
           <input
@@ -172,7 +210,7 @@ const AddEmployeeForm = ({
             value={newEmployee.type_employe}
             onChange={onInputChange}
           />
-        </label>
+        </label><br />
         <label>
           Statut:
           <select
@@ -185,7 +223,13 @@ const AddEmployeeForm = ({
             <option value="en_congé">En congé</option>
             {/* Ajoutez d'autres options selon vos besoins */}
           </select>
-        </label>
+        </label><br />
+</fieldset>
+        
+
+
+
+
         <button type="button" onClick={onAddEmployee}>
           Ajouter
         </button>
