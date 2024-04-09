@@ -1,0 +1,95 @@
+/* styles/inf_patient.module.css */
+
+.container {
+    /* Styles généraux du conteneur */
+}
+
+.container h2 {
+    font-weight: bold;
+    font-size: 1.8em;
+    margin: 2rem 0;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.imgS {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border: 3px double #e1e1e1;
+}
+
+.container form {
+    /* Styles généraux du formulaire */
+}
+
+.photo_content {
+    display: flex;
+    align-items: end;
+    gap: 30px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.btnS,
+.container button[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: 400;
+    width: 10rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btnS:hover,
+.container button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+.btnR,
+.container button {
+    background-color: #c0c1c2;
+    color: #000000;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: 400;
+    width: 10rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btnR:hover,
+.container button:hover {
+    background-color: #9e9e9e;
+}
+
+.container form fieldset {
+    background-color: #fff;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+}
+
+.container form fieldset legend {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8rem 1rem;
+}
+
+.container label {
+    display: grid;
+    grid-template-columns: 300px 800px;
+}
+
+.container input,
+.container select,
+.container textarea {
+    padding: 8px;
+    background-color: rgb(238, 238, 238);
+    border: none;
+    margin-bottom: 10px;
+}

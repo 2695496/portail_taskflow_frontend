@@ -1,6 +1,6 @@
 import Labo_Accueil from '../contents/Labo/Labo_Accueil';
 import Labo_Attributions from '../contents/Labo/Labo_Attributions';
-import Labo_Examens from '../contents/Labo/Labo_Examens';
+import Labo_Examens from '../contents/Labo/Labo_Patients';
 import styles from '../styleSheet/Aside.module.css';
 
 import React, { useState } from 'react'
@@ -19,10 +19,10 @@ const AsideLaborantins = ({setContent, setTitre}) => {
       setSelect(1);
       setTitre("Attributions");
     }
-    const handleExamens = (e) => {
+    const handlePatients = (e) => {
       setContent(<Labo_Examens />);
       setSelect(2);
-      setTitre("Examens")
+      setTitre("Patients")
     }
 
     return (
@@ -33,7 +33,7 @@ const AsideLaborantins = ({setContent, setTitre}) => {
       <li className={select === 0 ? styles.select: ""} onClick={handleAccueil}>Accueil</li>
   
       <li className={select === 1 ? styles.select: ""} onClick={handleAttributions}>Attributions</li>
-      <li className={select === 2 ? styles.select: ""} onClick={handleExamens}>Examens</li>
+      <li className={select === 2 ? styles.select: ""} onClick={handlePatients}>Patients</li>
       
       
 

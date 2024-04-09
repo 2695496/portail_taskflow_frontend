@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import styles from "./styles/inf_patient.module.css";
+
+ 
+
 
 const InformationsPatient = {
     nom: "Dupont",
@@ -72,7 +76,7 @@ const INF_Patient = () => {
     };
 
     return (
-        <div>
+        <div className={styles.container}>
             <div>
                 <h2>Informations du Patient</h2>
                 <p>Nom: {InformationsPatient.nom}</p>

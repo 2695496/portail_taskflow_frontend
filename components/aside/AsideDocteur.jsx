@@ -33,11 +33,7 @@ const AsideDocteur = ({setContent, setTitre}) => {
       setSelect(3);
       setTitre("Examens");
     }
-    const handleConsultations = (e) => {
-      setContent(<DR_Consultations />);
-      setSelect(4);
-      setTitre("Consultations");
-    }
+
     return (
   
     
@@ -48,7 +44,6 @@ const AsideDocteur = ({setContent, setTitre}) => {
       <li className={select === 1 ? styles.select: ""} onClick={handleAttributions}>Attributions</li>
       <li className={select === 2 ? styles.select: ""} onClick={handlePatients}>Patients</li>
       <li className={select === 3 ? styles.select: ""} onClick={handleExamens}>Examens</li>
-      <li className={select === 4 ? styles.select: ""} onClick={handleConsultations}>Consultations</li>
   
 
     </ul>
